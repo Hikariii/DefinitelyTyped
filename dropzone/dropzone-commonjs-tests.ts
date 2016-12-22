@@ -278,5 +278,12 @@ dropzone
 		console.count('queuecomplete');
 	});
 
+	dropzone.off("drop", () => {
+                console.count('drop');
+        });
+
+        dropzone.off("dragstart");
+
+        dropzone.off();
 
 dropzone.destroy();

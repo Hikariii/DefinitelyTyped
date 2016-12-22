@@ -1,6 +1,6 @@
 // Type definitions for Dropzone 4.3.0
 // Project: http://www.dropzonejs.com/
-// Definitions by: Natan Vivo <https://github.com/nvivo>, Andy Hawkins <https://github.com/a904guy/,http://a904guy.com/,http://www.bmbsqd.com>, Vasya Aksyonov <https://github.com/outring>, Simon Huber <https://github.com/renuo>
+// Definitions by: Natan Vivo <https://github.com/nvivo>, Andy Hawkins <https://github.com/a904guy/,http://a904guy.com/,http://www.bmbsqd.com>, Vasya Aksyonov <https://github.com/outring>, Simon Huber <https://github.com/renuo>, Sebastiaan de Rooij <https://github.com/Hikariii>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
 /// <reference types="jquery"/>
@@ -178,7 +178,7 @@ declare class Dropzone {
 
 	on(eventName:string, callback:(...args:any[]) => void):Dropzone;
 
-	off(eventName:string):Dropzone;
+	off(eventName?:string, callback?:(...args:any[]):Dropzone;
 
 	emit(eventName:string, ...args:any[]):Dropzone;
 
@@ -269,5 +269,6 @@ interface JQuery {
 }
 
 declare module "dropzone" {
+	module Dropzone {}
 	export = Dropzone;
 }
